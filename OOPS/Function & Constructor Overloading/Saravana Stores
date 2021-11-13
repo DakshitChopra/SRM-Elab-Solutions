@@ -1,0 +1,38 @@
+/*Problem Description:
+Saravana Stores across the state have decided to give increment in wages of its employees.
+And they wants the automated software which does the job of calculating the revised wages for them based on the increment amount given by the cashier.  
+So they are looking for the developer who can build the tool based on their requirement.
+Can you help them?
+Function Description:
+The Concept of Function Overloading need to be used.
+Constraints:
+1000≤cursal≤50000
+1000≤bonus≤5000
+Input Format:
+First and Second Line of input has a single value of type integer representing the Actual Salary Before increment.
+Third line of input has a single value of type integer representing the bonus.
+Output Format:
+In the first line of output print the Salary before increment.
+In the second line of output print the Updated Salary after increment.*/
+
+#include <iostream>
+using namespace std;
+class Salary{
+public: void Increment(int cursal){
+    cin>>cursal;
+    cout<<cursal<<endl;;
+}
+void Increment(int cursal,int bonus){
+    cin>>cursal>>bonus;
+    cursal+=bonus;
+    cout<<cursal;
+}
+};
+int main()
+{
+    int cursal=0,bonus=0;
+Salary empsal;
+empsal.Increment(cursal);
+empsal.Increment(cursal,bonus);
+	return 0;
+}
