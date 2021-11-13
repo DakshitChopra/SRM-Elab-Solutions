@@ -1,0 +1,41 @@
+/*Problem Description:
+A Little Lion king and his friends from the Zoo like candies very much.
+There are N lions in the Zoo. 
+The lion with number K (1 ≤ K ≤ N) will be happy if he receives at least AK candies. 
+Overall there are C candies in the Zoo.
+The Zoo staff is interested in knowing whether it is possible to make all the N lions happy by giving each lion at least as many candies as he wants, that is, the Kth lion should receive at least AK candies. 
+Each candy can be given to only one lion. 
+Constraints:
+1 ≤ T ≤ 1000
+1 ≤ N ≤ 100
+1 ≤ C ≤ 10^9
+1 ≤ AK ≤ 10000, for K = 1, 2, ..., N
+Input Format:
+The first line of the input file contains an integer T, the number of test cases. T test cases follow. Each test case consists of exactly 2 lines. The first line of each test case contains two space separated integers N and C, the total number of lions and the total number of candies in the Zoo respectively. 
+The second line contains N space separated integers A1, A2, ..., AN.
+Output Format:
+Print the output exactly one line containing the string "Yes" if it possible to make all lions happy and the string "No" otherwise. 
+Output is case sensitive. So do not print 'YES' or 'yes'.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+    int N,C,sum=0;
+    cin>>N>>C;
+    for(int i=0;i<N;i++)
+    {
+        int k;
+        cin>>k;
+        sum+=k;
+    }
+    if(sum>C)
+    cout<<"No\n";
+    else
+    cout<<"Yes\n";
+    }
+	return 0;
+}
