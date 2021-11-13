@@ -1,0 +1,31 @@
+/*Problem Description:
+Faculties in most of the Higher Technical Universities has a tedious task of taking attendance where students do all the tricks to put proxy.
+So Faculties decided to make the attendance marking process simple by developing a Attendance Marking Software.
+Can you develop a Attendance Marking Software according to their need so that Faculties can use their time productively in teaching?
+Functional Description:
+Use the concept of constructor overloading that by Default prints "No Attendance" when no parameters are passed
+and 
+Prints Hello followed by name when name is passed as parameter.
+Input Format:
+Only line of input has a single value of type string representing the name of the Student.
+Output Format:
+In the First Line of output print as “No Attendance”
+In the Second Line of output print as "Hello" followed by name of the student provided as input.*/
+
+#include <iostream>
+using namespace std;
+class Attendance{
+public:
+Attendance(){cout<<"No Attendance"<<endl;}
+Attendance(string studentname){
+    cin>>studentname;
+    cout<<"Hello "<<studentname;
+}
+};
+int main()
+{
+    string studentname;
+Attendance stdabs; 
+Attendance stdpst(studentname);
+	return 0;
+}
