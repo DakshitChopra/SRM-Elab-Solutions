@@ -1,0 +1,29 @@
+/*Problem Description:
+Three brothers want to take a photo with family members. The photographer is capturing the photo from a long distance. 
+Some of the family members are standing behind that brothers and those people are not visible to the photographer. 
+So the photographer gets confused with the heights of three brothers. 
+To get clarity, he asked, "who is the tallest person among those three brothers? But no one responded clearly. 
+Can you help the photographer in finding the tallest among the three brothers?
+Constraint:
+60 ≤ bro1 ≤ 80
+60 ≤ bro2 ≤ 80
+60 ≤ bro3 ≤ 80
+Input Format :
+The only line of input has three numbers bro1,bro2 and bro3 of type integers separated by a space which represents the height of three brothers.
+Output Format:
+Print the height of the tallest person among three brothers.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int bro1,bro2,bro3;
+    cin>>bro1>>bro2>>bro3;
+    if(bro1>bro2 && bro1>bro2)
+    cout<<bro1;
+    else if(bro2>bro1 && bro2>bro3)
+    cout<<bro2;
+    else
+    cout<<bro3;
+	return 0;
+}
