@@ -1,0 +1,28 @@
+/*Problem Description:
+2022 was approaching and the world was about to end. So 2 gods Shiva and Jesus created the Cyberverse.
+But this time disappointed with humans both the gods decided not to have humans in this world. 
+So they created a world of cyborgs. 
+A world without humans. Isn’t it interesting? So let us dive into the cyberverse and have a look at their problems.
+There are N kid cyborgs with Chief Cyborg '100gods' and he has K weapons with him. 
+He wants to distribute those K weapons among N kid cyborgs. 
+Since all the kid cyborgs are very good friends, so they set a rule among themselves for taking those weapons. 
+The rule states that the difference between kid cyborg having the maximum weapons and the kid cyborg having minimum weapons should be less than or equal to 1.
+Find the value of the minimum number of weapons a kid cyborg can have when all the K weapons are distributed among them.
+Constraints:
+1≤N≤500
+1≤K≤1000
+Input Format:
+Only line of input will contain two space-separated integers denoting N and K respectively.
+Output Format:
+Output a single line containing an integer X denoting the minimum number of weapons a kid cyborg can have in that test case.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,k,weapons;
+    cin>>n>>k;
+    weapons=k/n;
+    cout<<weapons;
+	return 0;
+}
