@@ -1,4 +1,4 @@
-//Problem Description:
+/*Problem Description:
 On one beautiful Sunday Selvan went to Aaron's house for exam preparation. 
 They have decided to study Mathematics subject because they have exams by coming Monday,Aaron is a master in Mathematics but Selvan is not so good in Mathematics so James
 trained with Selvan for getting a high score in the exam.
@@ -14,7 +14,7 @@ Constraint:
 Input format: 
 The first and second line of the input represents two different input value of type float.
 Output format: 
-The first and second line of the output represents outputs of first and second line of input of type double.
+The first and second line of the output represents outputs of first and second line of input of type double.*/
     
 #include <iostream>
 #include <iomanip>
