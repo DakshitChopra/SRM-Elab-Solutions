@@ -1,0 +1,52 @@
+/*Problem Description:
+Today is Jack's birthday and he is looking forward to his gift. As usual, the gift is hidden and Jack has to follow a sequence of N instructions to reach it.
+Initially, Jack is standing in the cell (0,0) of a two-dimensional grid. 
+The sequence of instructions is given as a string S. If we denote Jack's current cell by (x,y), each character of S corresponds to an instruction as follows:
+'L' means to go left, i.e. to the cell (x−1,y)
+'R' means to go right, i.e. to the cell (x+1,y)
+'U' means to go up, i.e. to the cell (x,y+1)
+'D' means to go down, i.e. to the cell (x,y−1)
+In addition, Jack should never perform multiple consecutive moves along the same axis of the grid. 
+If there are multiple consecutive instructions to move along the same axis (left/right or up/down), he should perform only the first of these moves.
+Find the cell (xg,yg) which contains the hidden gift.
+Constraints:
+1≤T≤100
+1≤N≤1,000
+S contains only characters 'L', 'R', 'U' and 'D'
+Input Format:
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains a single integer N.
+The second line contains a single string S with length N.
+Output Format:
+Print a single line containing two space-separated integers xg and yg.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        
+    int n;
+    cin>>n;
+    char S[n];
+    cin>>S;
+    int x=0,y=0;
+    int i;
+    for(i=0;i<n;i++)
+    {
+        if(S[i]=='L' && S[i-1]!='L' && S[i-1]!='R')
+        x--;
+   else if(S[i]=='R' && S[i-1]!='L' && S[i-1]!='R')
+        x++;
+   else if(S[i]=='U' && S[i-1]!='U' && S[i-1]!='D')
+         y++;
+   else if(S[i]=='D' && S[i-1]!='U' && S[i-1]!='D')
+   y--;
+    }
+    cout<<x<<' '<<y<<endl;
+    }
+    
+	return 0;
+}
