@@ -1,0 +1,24 @@
+/*Problem Description:
+Krishna has just arrived in the city of Madhura.
+He brought an old house and renovating it. On seeing the pathetic floor conditions he planned to pave it with tile. 
+He has a m x n units of floor area and want to cover it up with 2x1 size tiles. 
+Krishna is no so good at calculations. 
+Could you help him to find out the minimum number tiles he needs to cover the floor?
+Constraints:
+1 ≤ m,n ≤ 500
+Input Format:
+Only line of input has two integers m and n separated by as space.
+Output Format:
+Print the minimum number of tiles need to pave the floor as output.*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int m,n;
+    cin>>m>>n;
+    cout<<ceil(ceil(m*n)/2);
+
+	return 0;
+}
