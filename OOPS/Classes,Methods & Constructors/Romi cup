@@ -1,0 +1,51 @@
+/* (Not completed/faulty logical test case)
+Question description:
+A lot of people in Finland hates rain, but Romi do not. 
+Rain pacifies, puts Romi thoughts in order. By these years Romi have developed a good tradition — when it rains, Romi go on the street and stay silent for a moment, contemplate all around her, enjoy freshness, think about big deeds she have to do.
+Today everything had changed quietly. Romi went on the street with a cup contained water, her favorite drink. 
+In a moment when Romi were drinking a water she noticed that the process became quite long: the cup still contained water because of rain. 
+She decided to make a formal model of what was happening and to find if it was possible to drink all water in that situation.
+Thus, Romi cup is a cylinder with diameter equals d centimeters. 
+Initial level of water in cup equals h centimeters from the bottom.
+Romi drink a water with a speed equals v milliliters per second. But rain goes with such speed that if she do not drink a water from the cup, the level of water increases on e centimeters per second. 
+The process of drinking water from the cup and the addition of rain to the cup goes evenly and continuously.
+Find the time needed to make the cup empty or find that it will never happen. 
+It is guaranteed that if it is possible to drink all water, it will happen not later than after 10^4  seconds.
+Note one milliliter equals to one cubic centimeter.
+Constraints:
+1 ≤ d, h, v, e ≤ 10^4
+Input Format:
+The only line of the input contains four integer numbers d, h, v, e, where:
+ d — the diameter of your cylindrical cup,
+ h — the initial level of water in the cup,
+ v — the speed of drinking process from the cup in milliliters per second,
+ e — the growth of water because of rain if you do not drink from the cup.
+ Output Format:
+ If it is impossible to make the cup empty, print "NO" (without quotes).Otherwise print "YES" (without quotes) in the first line. 
+ In the second line print a real number — time in seconds needed the cup will be empty. 
+ The answer will be considered correct if its relative or absolute error doesn't exceed 10^-4.
+ It is guaranteed that if the answer exists, it doesn't exceed 10^4.*/
+ 
+ #include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+class Rain{
+  float d,h,v,e,r;
+  double  pi=2*acos(0.0);
+  public:void Cup(){
+  cin>>d>>h>>v>>e;
+  r=d/2;
+  float vw=r*r*pi*e;
+        if (vw>=v) 
+        cout<<"NO";
+        else{
+            cout<<"YES"<<endl;
+            cout<<fixed<<setprecision(10)<<(pi*r*r*h)/(v-vw);}  
+  }
+    };
+int main()
+{
+    Rain MakingEmpty;
+    MakingEmpty.Cup();
+	return 0;
+}
