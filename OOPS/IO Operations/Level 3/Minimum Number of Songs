@@ -1,0 +1,29 @@
+/*Problem Description:
+Simon loves to listen to music while walking his way to attend boring lectures in his college.
+He has a playlist of songs which has all songs of equal length, L. (in seconds)
+One day while going on his way, he decided to calculate his average walking speed and he comes to know that he walks at a speed of 0.5 m/s.
+You will be given the distance D ,he has to walk down to reach his class, after which he stops the music.
+You have to find the minimum number of songs he needs to add into his playlist so as music plays in the whole path.
+Constraints:
+1<= L <=120 (in seconds)
+1<= D <=5000 (in meters)
+ 
+Input Format:
+Only line of input contain two integer L and D separated by a space representing length of song and distance he has to walk respectively.
+Output Format:
+In the only line of output print the Integer value equal to number of songs he need to add into playlist before start to walk.*/M
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int L,D;
+    cin>>L>>D;
+    int t=D/0.5;
+    int n=t/L;
+    if(t/L!=0)
+    n++;
+    else{};
+    cout<<n;
+	return 0;
+}
