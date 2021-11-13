@@ -1,0 +1,36 @@
+/*Problem Description:
+Rohini an GATE Trainer. During his preparation for tomorrow's session on Number Systems.
+She thought of giving the task on creating a programming logic for the following case for her students:
+Function Description:
+Assume integer n (in base 10) and a base k is provided to you.
+Now Your task is to print sum of the digits of n after converting n from base 10 to base k.
+After converting, each digit should be interpreted as a base 10 number, and the sum should be returned in base 10.
+Constraints:
+1 ≤ n ≤ 500
+2 ≤ k ≤ 10
+Input Format:
+Only Line of Input has two values of type integer separated by a space representing n and k respectively.
+Output Format:
+In the only line of output print the desired result.*/
+
+#include <iostream>
+using namespace std;
+class ChangeBase{
+public:
+    void sumBase(int n,int k) {
+        int ans = 0;
+        while (n > 0) {
+            ans += n % k;
+            n /= k;
+        }
+       cout<<ans;
+    }
+};
+int main(){
+int n=0,k=0;
+cin>>n>>k;
+ChangeBase Convert;
+Convert.sumBase(n,k);
+
+	return 0;
+}
