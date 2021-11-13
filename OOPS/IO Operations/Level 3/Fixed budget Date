@@ -1,0 +1,40 @@
+/*Problem Description
+Karthik  asks Jessi for a date .
+But Karthik is a hardworking guy and has a value for money so he already pre-planned about his date and fixed a budget to spend from his savings .
+Given a fixed budget B and an array A[ ] of size N for the amount of N expenses .
+You have to calculate the total amount and check whether the date costs him beyond his fixed budget . 
+If the total amount goes beyond budget then print “YES” otherwise “NO” .
+Constraints:
+1≤T≤100
+1≤N≤10 power 4
+1≤A[i]≤10 power 4
+Input Format:
+First line will contain T, number of testcases. Then T testcases follow.
+First line of each testcase contains of a single line of input, two integers N,B.
+Second line of each testcase contains N integers A[0],A[1],...,A[N−1] separated by a single space.
+Output Format:
+For each testcase, output in a single line answer YES or NO .*/
+
+#include <iostream>
+using namespace std;
+#define ll long long int
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        ll n,b,sum=0;
+    cin>>n>>b;
+    int a[n];
+    for(int i=0;i<n;i++){
+    cin>>a[i];
+    sum+=a[i];
+}
+if (sum>b){
+    cout<<"YES"<<endl;
+}
+else
+{cout<<"NO"<<endl;}
+}	
+return 0;
+}
