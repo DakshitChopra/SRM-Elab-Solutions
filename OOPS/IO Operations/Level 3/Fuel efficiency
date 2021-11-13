@@ -1,0 +1,28 @@
+/*Problem Description:
+ArulMozhivarman and his wife Yazhini loves to travel around the world. As a part of their epic journey they together spent 1 year in various states of United States and after 1 year they traveled to Canada.
+Usually in United States fuel efficiency for vehicles is normally expressed in MilesPer Gallon(MPG).
+But in Canada, fuel efficiency is normally expressed in Liters Per Hundred Kilometers (L/100 km).
+ArulMozhivarman and his wife Yazhini were little bit confused in calculating the fuel efficiency of the vechicles they for their daily travels and they feel if there is portal for converting the fuel efficiency in  MPG to L/100 km then their life will be much more easier.
+Can you help them with the fuel efficiency conversion portal so that they can enjoy their time together without working about the fuel efficiency of their vehicles?
+Functional Description:
+1 MPG = 235.215 L/100 km
+Constraints:
+1≤mpg<150
+Input Format
+Only line of input has single integer value representing the fuel efficiency in MPG.
+Output Format
+Print the single floating point value representing the fuel efficiency in L/100 km.*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    int mpg;
+    float lph;
+    cin>>mpg;
+    lph=235.21/mpg;
+    cout<<fixed<<setprecision(2)<<lph<<" L/100 km";
+
+	return 0;
+}
