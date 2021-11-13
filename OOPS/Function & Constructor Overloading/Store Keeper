@@ -1,0 +1,38 @@
+/*Problem Description:
+Store Keeper of Super market is finding it difficult to keep track of the stocks in the shop.
+So he wants a automated script which pick the total number of consumed items from each category and calculate the remaining stock and print those details so that store keeper can order for those items.
+Can you help them by developing the programming logic for satisfying their needs?
+Function Description:
+Use the concept of Functional Overloading to implement the task?
+Constraints:
+2000≤id≤7000
+1≤ totalavl ≤ 1500
+1≤ consumed ≤1000
+Input Format:
+First Line of Input has a single value of type integer representing Item ID.
+Second Line of Input has a single value of type integer representing Total Available Count of an Item.
+Third Line of Input has a single value of type integer representing Total Consumed Count of an Item.
+Output Format:
+In the First Line of  output print the Item ID.
+In the Second Line of output print the remaining quantity of an item.*/
+
+#include <iostream>
+using namespace std;
+class Store{
+  public:void itemcount(int id){
+      cin>>id;
+      cout<<id<<endl;
+  }
+  void itemcount(int totalavl,int consumed){
+      cin>>totalavl>>consumed;
+      cout<<totalavl-consumed;
+  }
+};
+int main()
+{ int id=0,totalavl=0,consumed=0;
+ 
+Store purchase;
+purchase.itemcount(id);
+purchase.itemcount(totalavl,consumed);
+	return 0;
+}
