@@ -1,0 +1,25 @@
+/*Problem Description:
+Dhoni's daughter Ziva is a hyperactive child, so she used to ask a lot of questions to Dhoni while playing with him.
+One fine evening Dhoni and Ziva were playing in Chepak Stadium in Chennai, at that time Ziva looking at the Moon in the sky asked Dhoni what is the gravity in the moon? 
+Dhoni said it's 16.6 percentage that of earth.
+Ziva didn't get satisfied with that then she asked what will be my weight on the moon?
+Dhoni was a little bit confused to answer Ziva !!!!!
+Can you help Dhoni to answer the question by creating a logic that calculates the weight of the person on the moon so that Ziva will be happy knowing her weight?
+Constraints:
+1≤weightinearth≤150
+Input Format:
+Only line of input has a single integer representing the weight of the person in earth.
+Output Format:
+In the only line of output print the weight of the person in moon.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int weightinearth;
+    cin>>weightinearth;
+    float weightinmoon;
+    weightinmoon=0.166*weightinearth;
+    cout<<weightinmoon;
+	return 0;
+}
