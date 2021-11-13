@@ -1,0 +1,33 @@
+/*Problem Description:
+Mr.Shahrukh has given you a binary string S. 
+You need to transform this string into another string of equal length consisting only of zeros, with the minimum number of operations.
+A single operation consists of taking some prefix of the string S and flipping all its values. 
+That is, change all the 0s in this prefix to 1s, and all the 1s in the prefix to 0s. 
+You can use this operation as many number of times as you want over any prefix of the string.
+Constraints:
+1 ≤ |S| ≤ 100,000
+Input Format:
+The only line of the input contains the binary string, S .
+Output Format:
+Print the output in a single line containing a single integer representing the minimum number of operations that are needed to transform the given string S into the string of equal length consisting only of zeros.*/
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    char S[1000000];
+    cin>>S;
+    int s=strlen(S);
+    int ans=0;
+    for(int i=0;i<s;i++){
+    if(S[i]!=S[i+1])
+         ans++;
+    else{
+        ans++;
+        ans--;
+        }
+    }
+    cout<<ans;
+	return 0;
+}
