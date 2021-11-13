@@ -1,0 +1,45 @@
+/*Problem Description:
+Athithya Karihalan the Chola King has a hobby of learning about building architectures and its construction methodologies throughout India.
+Imagine he has given you the task of analyzing the building parameters and find the stability of the building. 
+Can you complete the prestigious task assigned to you ??  
+Functional Description:
+Athithya Karihalan is interested in Buildings that are almost in the shape of a square. 
+If the length and width of the building differ by at most 10, then the building is suitable. 
+If the difference between the length and width of the building is more than 10, then it is not suitable. 
+Constraints:
+20≤length≤500
+40≤width≤400
+20≤ratePerSqFeet≤1000
+Input Format:
+Only line of input has three integer values separated by a space representing length, width and ratePerSqFeet respectively.
+Output Format:
+In the First line of output print the cost of building.
+In the Second line of output print if the building is Suitability of building */
+
+#include <iostream>
+using namespace std;
+class Building{
+        int length,width,ratePerSqFeet,cost;
+        string s;
+        public:
+    Building(){
+        cin>>length>>width>>ratePerSqFeet;
+    }
+    int calculateCost(){
+        cost=length*width*ratePerSqFeet;
+        return cost;
+    }
+    void determineSuitability(){
+        if(length-width>10 || width-length>10)
+       cout<<"Stability : Not Suitable"<<endl;
+       else
+       cout<<"Stability : Suitable"<<endl;
+    }
+    };
+
+int main(){    
+    Building construction;
+    cout<<"Cost of the Building : "<<construction.calculateCost()<<endl;
+    construction.determineSuitability();
+	return 0;
+}
