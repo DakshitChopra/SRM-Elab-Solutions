@@ -1,0 +1,43 @@
+/*Problem Description:
+Johit and Rohit are classmates who often challenge each other and keeps a bet on it.
+Rohit usually plays smart in most of the times and wins the bet.
+Johit who is on the loosing side on most of the occasions loves to Win and waiting for yet another challenge from Rohit
+Finally the day has arrived and Rohit once again smartly given the challenging task on Time based problem knowing that Johit was not so good in in
+Johit was given a string time in the form of hh:mm, where some of the digits in the string are hidden (represented by ?).
+Now Rohit asked Johit to print the the latest valid time he can get from time by replacing the hidden digits.
+Johit is once again on Pressure of Winning, can you help Johit for Winning his first challenge against his friend ?
+Function Description
+The valid times are those inclusively between 00:00 and 23:59.
+Constraints:
+time is in the format hh:mm.
+It is guaranteed that you can produce a valid time from the given string.
+Input Format:
+Only line of input has a time in the format hh:mm with ? on it representing the hidden digits in the time.
+Output Format:
+In the only line of output print the latest valid time he can get from time by replacing the hidden digits.
+Explanation:
+Assume Input Time = 2?:?0
+Here the latest hour beginning with the digit '2' is 23 and the latest minute ending with the digit '0' is 50.
+So Output Time = 23:50*/
+
+#include <iostream>
+using namespace std;
+#define ll long long int
+class HiddenTime {
+public:
+  void maximumTime(string time) {
+    if (time[0] == '?') time[0] = time[1] >= '4' && time[1] <= '9' ? '1' : '2';
+    if (time[1] == '?') time[1] = time[0] == '2' ? '3' : '9';
+    if (time[3] == '?') time[3] = '5';
+    if (time[4] == '?') time[4] = '9';
+    cout<<time;
+
+  }
+};
+int main()
+{   string time;
+    cin>>time;
+    HiddenTime LatestTime;
+    LatestTime.maximumTime(time);
+	return 0;
+}
