@@ -1,4 +1,4 @@
-//Problem Description :
+/*Problem Description :
 Laaysa with her friends going to the theatre for a movie. 
 The seating arrangement is triangular in size. 
 Theatre staffs insisted the audience to sit in odd row if the seat number is odd and in even row if the seat number is even. 
@@ -9,7 +9,7 @@ Constraints:
 Input Format: 
 Only line of input has single integer value representing the number of rows in the theatre.
 Output Format:
-Print the layout based on the number of rows specified in input. 
+Print the layout based on the number of rows specified in input.*/
 
 #include <iostream>
 using namespace std;
