@@ -1,0 +1,40 @@
+/*Problem Description:
+Vimal's father gave him an array of N numbers and gave him a task.
+Vimal's task is, he need find the contiguous sub-array with maximum sum if he want to get a new mobile phone as a reward.
+But vimal is finding it difficult to complete the task.
+Can you help him for competing his task so that he will a new mobile phone as a reward.
+Constraints:
+1 ≤ T ≤ 110
+1 ≤ N ≤ 106
+-107 ≤ A[i] <= 107
+Input Format:
+The first line of input contains an integer T denoting the number of test cases. The description of T test cases follows. The first line of each test case contains a single integer N denoting the size of array.  
+The second line contains N space-separated integers A1, A2, ..., AN denoting the elements of the array.
+Output Format:
+Print the maximum sum of the contiguous sub-array in a separate line for each test case.*/
+
+#include <iostream>
+#include <climits>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--){
+    int n,max=INT_MIN,maxe=0;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+    cin>>a[i];
+     maxe+=a[i];
+    if(max<maxe)
+    {max=maxe;
+    }
+    if(maxe<0)
+    {maxe=0;
+    }
+       }
+    cout<<max<<endl;
+}
+	return 0;
+}
