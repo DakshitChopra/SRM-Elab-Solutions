@@ -1,0 +1,40 @@
+/*Problem Description:
+Dhoni is the CEO of the company in Ranchi and he have to manage all the salaries of employees.
+He is finding it bit difficult to manage that because of his national duties as Indian Cricketer.
+He is interested in automating the salary credit process of his employees.
+So he is looking for the software which credits the default salary to the employees and get the feedback from the employee "Expected Salary" so that Dhoni can know the expectations of his employees.
+Can you help Dhoni?
+Functional Description:
+Use the Concept  of Constructor Overloading to develop what Dhoni expects.
+The Default Salary of employees is 10000.
+Constraints:
+10000≤ sal ≤ 75000
+Input Format:
+Only line of input has a single value of type integer representing the expected salary of the employee.
+Output Format:
+In the First Line of output print the default salary credited by the company.
+In the Second Line of output print the expected salary of the employee.*/
+
+#include <iostream>
+using namespace std;
+int deftsalary;
+
+class Salary
+{
+  public:Salary(){deftsalary=10000;cout<<deftsalary<<endl;}
+  
+  Salary(int sal)
+  {
+    int ExpectedSalary;
+    cin>>ExpectedSalary;
+    cout<<ExpectedSalary<<endl;
+  }
+};
+
+int main()
+{
+  int sal=0;
+  Salary();
+  Salary ExpectedSalary(sal);
+  return 0;
+}
