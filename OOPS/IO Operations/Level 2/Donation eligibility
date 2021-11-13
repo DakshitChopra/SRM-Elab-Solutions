@@ -1,0 +1,28 @@
+/*Problem Description:
+A team from the Royal Squatraclub had planned to conduct a rally to create awareness among the Pune people to donate eyes. They conducted the rally successfully. 
+Many of the Pune people realised it and came forward to donate their eyes to the nearby Hospitals. 
+The eligibility criteria for donating eyes is people should be above 18 and his her weight should be above 40. 
+There was a huge crowd and the staff in the eye donation centre found it difficult to manage the crowd. 
+So they decided to keep a system and ask the people to enter their age and weight in a system. 
+If a person is eligible he /she will be allowed inside.
+Help the blood bank staffs to pick the eligible people for blood donation.
+Constraints:
+1 ≤ people_age ≤ 120
+25 ≤ weight ≤ 85
+Input format:
+Only line of input has two integer values separated by a space representing people_age and weight.
+Output Format:
+Print as either “Eligible for Donation” or "Not Eligible for Donation" based on the condition.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int people_age,weight;
+    cin>>people_age>>weight;
+    if(people_age>18 && weight>40)
+    cout<<"Eligible for Donation";
+    else
+    cout<<"Not Eligible for Donation";
+	return 0;
+}
