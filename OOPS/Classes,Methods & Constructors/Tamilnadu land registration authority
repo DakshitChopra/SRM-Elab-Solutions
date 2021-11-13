@@ -1,0 +1,70 @@
+/*Problem Description:
+Tamilnadu land registration authority is panning to keep track of the native addresses and total area of the flats people have across the state.
+Since the total population and area need to be monitored is huge. Government is looking for the software which does this task.
+Can you help them with proper programming logic for implementing the same?
+Constraints:
+1≤ hno ≤500
+1≤ no_rooms ≤ 10
+1≤ length ≤ 50
+1≤ breadth ≤ 50
+1≤ height ≤ 50
+Input Format:
+The first line of the input contain a single string denoting the house name.
+The second line of the input contain three values of type Integer String and String separated by a space representing house number, city and state respectively.
+The third line of the input has a single integer representing the number of rooms.
+The subsequent lines of input must have length, breadth and height of each room
+Output Format:
+Print the details of the house in the expected format.*/
+
+#include <iostream>
+using namespace std;
+class room {
+	int l;
+	int b;
+	int h;
+	public : 
+		void getroom()
+		{
+			cin>>l>>b>>h;
+		}
+		void putroom()
+		{
+		cout<<"Length="<<l<<endl;   
+        cout<<"Breadth="<<b<<endl;
+        cout<<"Height="<<h<<endl;
+		}
+};
+class house{
+    string housenm,cty,state;
+    int hno,l,b,h,t;
+    room r[10];
+    public: 
+    void input();
+    void display();
+};
+   void house::input(){
+   cin>>housenm;
+   cin>>hno>>cty>>state;
+   cin>>t;
+   for(int i=0;i<t;i++){
+		r[i].getroom();
+	}
+    }
+void house::display(){
+        int a=t;
+        cout<<"House name="<<housenm<<endl;
+        cout<<"House No="<<hno<<endl;
+        cout<<"City="<<cty<<endl;
+        cout<<"State="<<state<<endl;
+        for(int i=0;i<a;i++){
+        cout<<"Detail of Room "<<i+1<<endl;
+         r[i].putroom();
+        }
+    }
+int main(){
+    house result;
+    result.input();
+    result.display();
+    
+	return 0;
+}
