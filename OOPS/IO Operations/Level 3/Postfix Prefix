@@ -1,0 +1,36 @@
+/*Problem Description
+Maran the head of data verification division of the popular Data Analytics company is responsible for verification of predicted change in data values based on some pattern from its initial value provided to him.
+Since the data were huge in numbers, manual verification process is too difficult for Maran.
+The expected data value pattern is as follows:
+Decrement of First Number and Increment of Second Number
+Increment of First Number and Decrement of Second Number
+Decrement of First Number and Increment of Second Number
+Increment of First Number and Decrement of Second Number
+Decrement of First Number and Increment of Second Number
+Function Description
+Use postfix mode for firstnum 
+Use prefix mode for secondnum
+Constraints
+1≤firstnum≤500
+1≤secondnum≤500
+Input Format:
+Only line of Input has two integers separated by a space representing the value of firstnum and secondnum respectively.
+Output Format:
+Print the Output by performing the expected operation in the expected pattern.*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int firstnum,secondnum;
+    
+    cin>>firstnum>>secondnum;
+    
+    cout<<firstnum--<<" "<<++secondnum<<endl;
+    cout<<firstnum++<<" "<<--secondnum<<endl;
+    cout<<firstnum--<<" " <<++secondnum<<endl;
+    cout<<firstnum++<<" "<<--secondnum<<endl;
+    cout<<firstnum<<" "<<++secondnum<<endl;
+
+	return 0;
+}
