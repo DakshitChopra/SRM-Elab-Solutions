@@ -1,0 +1,33 @@
+/*Problem Description:
+Nirobi have given a matrix C of size N x M to Rio.  
+Also Rio are given position of submatrix as X1, Y1 and X2, Y2 inside the matrix.  
+Now Rio needs to find the sum of all elements inside that submatrix.
+Can you help Rio in completing the task assigned by Nirobi.
+Constraints:
+1 ≤ T ≤ 15
+1 ≤ N, M ≤ 103
+1 ≤ C[N][M] ≤ 106
+1 <= X1, Y1, X2, Y2 <= M
+Input Format:
+The first line of input contains an integer T denoting the number of test cases.  
+The first line of each test case is n and m,n is the number of rows and m is the number of columns.
+The second line of each test case contains C[N][M].  
+The third line contains four value of X1, Y1, X2, Y2. X1, Y1 is the top left cell and X2, Y2 is the bottom right cell.
+Output Format:
+Print the sum of all elements inside that submatrix.*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+     int m,n;
+     cin>>m,n;
+     int C[m][n];
+     cin>>C[i][j];
+    }
+
+	return 0;
+}
