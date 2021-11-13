@@ -1,0 +1,39 @@
+/*Problem Description:
+Admission for the current Academic year is happening in Most of the Universities across the Country. 
+Once the Students got admitted they are assigned a unique Registration Number.
+Admission in charges used to assign give these details in some order.
+But during enrollment of the student there is a specific order need to be followed.
+So your task is to get the name and registration number of the student from admission in charge and to convert it to the correct format.
+Function Description:
+The Concept of function overloading need to be used.
+Input Format:
+First line of input has a single value of type string representing the name of student 1.
+Second line of input has a single value of type integer representing the id of student1.
+Third line of input has a single value of type integer representing the id of student 2.
+Fourth line of input has a single value of type string representing the name of student 2.
+Output Format:
+Print the details of students in the expected format.*/
+
+#include <iostream>
+using namespace std;
+class Student{
+public: void Identity(string name,int id)
+{
+    cin>>name>>id;
+    cout<<name<<" "<<id<<endl;
+}
+void Identity(int id,string name)
+{
+     cin>>id>>name;
+    cout<<name<<" "<<id<<endl;
+}
+};
+int main()
+{
+    string name; int id=0;
+    Student Details;
+    Details.Identity(name,id);
+    Details.Identity(id,name);
+
+	return 0;
+}
