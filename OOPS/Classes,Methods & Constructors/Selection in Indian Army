@@ -1,0 +1,36 @@
+/*Question description:
+Indian Army have decided to create a group of innovative developments for Strengthen Cyber Security of Indian Army consisting from 5 to 7 people and hire new employees for it. 
+After placing an advertisement Indian Army received n resumes. 
+Now the Scrutinising Committee has to evaluate each possible group composition and select one of them. 
+Can you help Indian army people in counting the number of variants of group composition to evaluate.
+Constraints:
+7 ≤ n ≤800
+Input Format:
+The only line of the input contains one integer n representing the number of potential employees that sent resumes.
+Output Format:
+Output one integer representing the number of different variants of group composition.*/
+
+#include <iostream>
+using namespace std;
+#define ll long long int
+void d(){;} class IndianArmy{
+    int n,i,j,sum=0;
+void calc(ll sum){
+        cin>>n;
+        ll ans;
+		for(i=5;i<=7;i++)
+		{
+			ans=1;
+			for(j=1;j<=i;j++)
+			ans=ans*(n-j+1)/j;
+			sum+=ans;
+    }cout<<sum;}
+     public:int ResumesofCamdidates(){
+      calc(sum);
+      return sum;}
+};
+int main()
+{   IndianArmy GroupingofResumes;
+    GroupingofResumes.ResumesofCamdidates();
+	return 0;
+}
