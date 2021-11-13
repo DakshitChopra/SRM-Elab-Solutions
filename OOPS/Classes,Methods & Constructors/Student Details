@@ -1,0 +1,40 @@
+/*Problem Description:
+Bhagavan the Government school teacher from Tamil Nadu is so involved with his students development which in turn even forced the Tamilnadu Educational Department to cancel his transfer from his old school on the request of his students.
+He is such an inspirational teacher. Now he has been assigned the new set of students from other schools to train them. 
+So before starting the training he wants to collect the personal details from the new student for maintaining the record in his school.
+Can you help him to automate his task of collecting student details?
+Functional Description:
+Bhagavan wanted to display his following details along with every student record.
+name="Bhagavan";roll=1593;height=172.5;weight=60.4;
+Note: Use the Concept of Default Constructor to display it.
+Constraints:
+100 ≤roll ≤2000
+100.0≤ height ≤190.0
+50.0≤ weight ≤100.0
+Input Format:
+Only line of input has four values of ty[e String, Integer, Float and Float separated by as space representing Name,Roll Number, Height and Weight of students respectively.
+Output Format:
+In First Line of output print the details collected from the student.
+In Second Line of output print the default details of Teacher Bhagavan.*/
+
+#include <iostream>
+using namespace std;
+class student{
+    public:
+    string name;
+    int roll;
+    float height,weight;
+    student(){name="Bhagavan";roll=1593;height=172.5;weight=60.4;}
+ void input(){
+     cin>>name>>roll>>height>>weight;}
+   void displaydata(){
+     cout<<name<<" "<<roll<<" "<<height<<" "<<weight<<endl;
+    }
+};
+int main()
+{   student s1,s2;
+    s1.input();
+    s1.displaydata();
+    s2.displaydata();
+	return 0;
+}
