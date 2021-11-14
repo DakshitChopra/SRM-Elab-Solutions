@@ -1,0 +1,52 @@
+/*Question description
+The math assignment of the weekend is that subtraction of two complex numbers. Raja need to verify his work. Can you help him to find the answer? 
+Input Format
+First line represent the real part and imaginary part of the complex number separated by a space
+Second line represent  the real part and imaginary part of the complex number separated by a space
+Output Format
+Print the complex form of given numbers in the first and second line of the output and then the third line will be the result.*/
+
+
+
+
+#include <iostream>
+using namespace std;
+class complex
+{
+  public:
+      float real, imag;
+      void input()
+       {
+         
+           cin >> real;
+           cin >> imag;
+       }
+
+       complex operator-(complex ob)
+       {
+           complex t;
+           t.real = real - ob.real;
+           t.imag = imag - ob.imag;
+
+           return t;
+       }
+
+       void output(){
+           if(imag < 0)
+               cout << real << imag << "i"<<endl;
+           else
+               cout << real << "+" << imag << "i"<<endl;
+       }
+};
+
+int main()
+{
+    complex c1, ob, result;
+    c1.input();
+    c1.output();
+    ob.input();
+    ob.output();
+    result = c1 - ob;
+    result.output();
+    return 0;
+}
