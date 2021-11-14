@@ -1,0 +1,36 @@
+/*Question description:
+Theakesh is working as a cashier in a National Bank. 
+One day the cash counting machine  stopped due to some technical issue. 
+But it is not easy to count the cash physically, so he plans to create a programming logic to count the notes. 
+But he stuck in implementing the logic for counting the notes. Kindly help him with the solution to count the cash.
+Constraints:
+1≤amt<50000000
+Input Format:
+Only line of input has a single value of type integer representing the amount to be counted  .
+Output Format:
+In the only line of output print the count of different combination of notes and its count as per the format.*/
+
+#include <iostream>
+using namespace std;
+#define ll long long int
+class Bank{};
+class CashCounting:public Bank{
+public: ll amount, i, temp;
+public: void get(){
+	cin >> amount;
+}
+public: void display(){
+     int a[7] = {500, 200, 100, 50, 10, 5, 1};
+      temp = amount;
+    	for(i = 0; i < 7; i++){
+		cout << a[i]<<": "<< temp / a[i] << endl;
+		temp = temp % a[i];	}
+    }
+};
+int main()
+{
+    CashCounting obj;
+    obj.get();
+    obj.display();
+	return 0;
+}
