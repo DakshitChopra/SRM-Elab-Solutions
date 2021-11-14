@@ -1,0 +1,43 @@
+/*Question description:
+Pallavi is an Construction Engineer. 
+During her Site Supervision she used to calculate the area and perimeter of different parts of the site and update in her design book.
+But it often leads to confusion while instructing the construction workers the construction plan.
+So to avoid confusion she is looking for the automated measurement tool.
+So she will be happy if you can help her with such as tool
+Can you do it?
+Constraints:
+100≤length≤5000
+100≤breadth≤5000 
+Input Format:
+Only line of input has a two value of type integer representing length and breadth measurements respectively.
+Output format:
+Print the area and perimeter in a separate lines respectively based on the measurements provided by Pallavi*/
+
+#include <iostream>
+using namespace std;
+class Area{
+};
+class Perimeter{
+};
+class Rectangle : private Area, private Perimeter{
+    public:
+    float l,b;
+    public:void  get_data(){
+        cin>>l>>b;}
+     public: void area_calc(){
+        cout<<l*b<<endl;
+    }
+    public: void peri_calc(){
+     cout<<2*(l+b);;
+   }
+    
+};
+
+int main()
+{
+    Rectangle r;
+    r.get_data();
+    r.area_calc();
+    r.peri_calc();
+	return 0;
+}
