@@ -1,0 +1,30 @@
+/*Question description:
+Priya is an architect. During her designing process she used to note down lot of length and breath details in her Design notebook.
+But it often leads to confusion.So to avoid confusion she decided to keep track of all her measurement digital.
+So she will be happy if you can help her with the logic which can get the measurements from here and display in the formatted manner.
+Can you do it?
+Constraints:
+100≤length≤5000
+100≤breadth≤5000
+Input Format:
+Only line of input has a two value of type integer representing length and breadth measurements respectively.
+Output format:
+Print the details in the formatted manner.*/
+
+#include <iostream>
+using namespace std;
+class ReceiveMesurement{};
+class FormatMesurement : public ReceiveMesurement{
+    public:void display(){
+        int l,b;
+        cin>>l>>b;
+        cout<<"Length:"<<l<<" metres"<<endl;
+        cout<<"Breadth:"<<b<<" metres";
+    }
+};
+int main()
+{
+    FormatMesurement mt;
+    mt.display();
+	return 0;
+}
