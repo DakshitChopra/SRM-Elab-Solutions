@@ -1,0 +1,30 @@
+/*Question description:
+Rohan is planing to Paint his house so he gone through lot of painting contractors and came to know that the lowest cost for painting is at Rs.27 per sq.feet so he decided to go with that price.
+Now he need to know the total area of his house and also need to know the estimated cost of painting his house.
+Can you hep Rohan by estimating it?
+Constraints:
+100≤length≤5000
+100≤breadth≤5000
+Input Format:
+Only line of input has a two value of type integer representing length and breadth measurements respectively.
+Output format:
+Print the total cost of painting the house.*/
+
+#include <iostream>
+using namespace std;
+#define ll long long int
+class ReceiveMesurement{};
+class CalculateArea : public ReceiveMesurement{
+    public: void painingarea(){
+        ll l,b,c=27;
+        cin>>l>>b;
+        cout<<l*b*c;
+    }
+};
+
+int main()
+{
+CalculateArea mt;
+mt.painingarea();
+	return 0;
+}
