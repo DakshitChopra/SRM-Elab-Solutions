@@ -1,0 +1,37 @@
+/*Question description
+Ravi participated in TCS off campus interview at reputed institution, one of the technical question he has to complete with in the given time, where you need to sort the array in the waveform. There might be multiple possible output of the program. the following pattern output is appreciated.
+
+#include <stdio.h>
+void swap(int array[],int b, int c) {
+    int temp = array[b];
+    array[b] = array[c];
+    array[c] = temp;
+}
+
+void bubble1 (int array[], int n){
+    int i,j;
+    for(i=0;i<n-1;i++){
+        for (j = i + 1; j < n; ++j){
+        if(array[i]>array[j])
+            swap(array,i,j);
+        
+    }
+}
+}
+int main() {
+        int i, n;
+        scanf("%d", &n);
+        int array[n];
+        for(i=0;i<n;i++)
+            scanf("%d", &array[i]);
+      
+         bubble1 (array,n);
+         
+   for (i = 0;i<n-1;i+=2)
+      swap(array,i,i+1);
+        
+         for (i = 0;i<n;i++)
+            printf("%d ", array[i]);
+            return 0;
+ 
+    }
