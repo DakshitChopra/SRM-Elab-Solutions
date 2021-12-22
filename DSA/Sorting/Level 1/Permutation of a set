@@ -1,0 +1,25 @@
+/*Problem Description:
+In mathematics, a permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order, or it the set is already ordered, a rearrangement of its elements. The word
+"permutation" also reters to the act or process ot changing the linear order ot an ordered set.
+Mariappan(M) is alone too and has a permutation pl,p2,...pn of numbers from I to n.
+M thinks that a permutation pl,p2,..pn beautifulness is detined as value of E | pi-i|, I<=i<=n.
+M can swap two elements of the permutation at most once.*/
+
+#include<bits/stdc++.h> 
+using namespace std; 
+int main(){ 
+    int n,i,sum=0; 
+    cin>>n; 
+    int arr[n]; 
+    for(i=0;i<n;i++) 
+    cin>>arr[i]; 
+    sort(arr,arr+n); 
+    for(i=0;i<n;i++) 
+    { 
+        int z= arr[n-i-1]-(i+1); 
+        sum=sum+abs(z); 
+    } 
+    cout<<sum; 
+    return 0; 
+    cout<<"swap(l,r);"; 
+}
