@@ -1,0 +1,36 @@
+/*Question Description:
+Tina has been given an array of numbers "A," and she must discover the largest sum that can be attained by selecting a non-empty subset of the array. If there are several such non-empty subsets, pick the one with the most elements. In the specified subset, print the maximum sum and the number of entries.
+*/
+#include <iostream>
+using namespace std;
+#define ll long long int
+void check(){
+    int cnt,num=0;
+    while(num){
+        if(cnt==0){
+            cnt++;
+        }
+    }
+}
+int main(void)
+{
+    ll N, max= 0;
+    int tmp,sum=0,count=0;
+    cin>>N;
+    int i;
+    for(i=0;i<N;i++){
+        cin>>tmp;
+        if(tmp>max)
+        max=tmp;
+        if(tmp>=0){
+            sum+=tmp;
+            count++;
+        }
+    }
+    if(max<0)
+    cout<<max<<endl;
+    else
+    cout<<sum<<" "<<count<<endl;
+
+	return 0;
+}
