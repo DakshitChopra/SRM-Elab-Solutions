@@ -1,0 +1,28 @@
+/*Problem Description:
+Prabhu Salamon is planning to make a very long journey across the cityside by Train. His journey consists of N train routes, numbered from 1 to N in the order he must take them. The trains themselves are very fast, but do not run often. The i-th train route only runs every Xi days.*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main ()
+{ 
+        int T;
+        long long int x,t,i,n,d;
+        cin >> T;       
+        for(t=0;t<T;t++)
+        {   cin >> n >> d;
+            stack < long long int >route;
+            for(i=n-1;i>=0;i--)
+            {
+                cin >> x;
+                route.push (x);
+            }
+            while (!route.empty ())
+            {
+                long long int c = route.top ();
+                route.pop ();
+                d=d-d%c;
+            }
+    cout <<d<< endl;
+    }
+   
+    }
