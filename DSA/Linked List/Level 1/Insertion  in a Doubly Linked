@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+struct Node
+{	int value;
+	Node *next;};
+class LinkedList
+{	Node *head = NULL;
+public:	void insertAtHead(int value)
+	{	Node *node = new Node;
+		node->value = value;
+		if (head == NULL)
+		{	node->next = NULL;		}
+		else
+		{	node->next = head;		}
+		head = node;
+	}
+	void displayList()
+	{	Node *flag = head;
+		while (flag != NULL)
+		{	cout << flag->value<<" ";
+			flag = flag->next;		}
+		cout << endl;	}
+	void reverse()
+	{	Node *tempNode = NULL;
+		Node *prevNode = NULL;
+		Node *currentNode = head;
+		while (currentNode != NULL)
+		{	tempNode = currentNode->next;
+			currentNode->next = prevNode;
+			prevNode = currentNode;
+			currentNode = tempNode;		}
+		head = prevNode;	}};
+int main()
+{
+	int n, value;
+	cin>>n;
+	LinkedList linkedList;
+    for(int i=0;i<n;++i){
+			cin >> value;
+			linkedList.insertAtHead(value);}
+			linkedList.displayList();
+			linkedList.reverse();
+			linkedList.displayList();
+	return 0;
+cout<<"struct Node *next; struct Node *prev;void insertStart(struct Node** head,int data)";
+}
