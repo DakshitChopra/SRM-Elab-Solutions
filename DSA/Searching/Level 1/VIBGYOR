@@ -1,4 +1,4 @@
-*/Problem Description:
+/*Problem Description:
 VIBGYOR isn't just an acronym, it's a way of life for Asian paint company. The owner is considering modernizing his paint mixing equipment with a computerized model. He's hired you to code the prototype. Your simple program will need to correctly output the right color based on the blends he's given you.
 Example  Colors
 Primary colors “ RED, BLUE, YELLOW”, 
@@ -8,7 +8,7 @@ Input Format:
 You will receive one to five lines of color combinations consisting of primary colors and secondary colors as well as black and white to make "dark" and "light" colors. The full science of colorisation and pigments will be implemented next, if your prototype is successful.
 Output Format:
 Print the output in a separate lines contains, Your program should output the correct color depending on what two colors were "mixed" on the line. Primary colors should mix together to create secondary colors. Anything mixed with "WHITE" or "BLACK" should be output as either "LIGHT X" or "DARK X" where X is the color "WHITE" or "BLACK" were mixed with. Anything mixed with itself won't change colors. You are guaranteed not to receive incompatible colors, or colors not listed in the color wheels shown above (aside from "WHITE" and "BLACK").
-Refer logical test cases for your reference./* 
+Refer logical test cases for your reference.*/
 
 
 #include<iostream>
