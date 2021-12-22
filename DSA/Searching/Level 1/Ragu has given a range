@@ -1,0 +1,27 @@
+/*Question Description: 
+Ragu has given a range [L, R] to Smith. Smith wants to require to find the number of integers 'X' in the range such that GCD(X, F(X)) > 1 where F(x) is equal to the sum of digits of 'X' in its hexadecimal (or base 16) representation. */
+
+#include <iostream>
+using namespace std;
+int hexa(int a)
+{   int sum=0;
+while(a>0){
+    sum+=a%16;
+    a=a/16;}
+     return sum;}
+int search(int a, int b){
+  if(a==0)
+  return b;else
+  return search(b%a,a);
+}
+int main()
+{
+    int t;cin>>t;
+  while (t--){
+      int l,r;
+      cin>>l>>r;
+      int count =0;
+      for(int i=l;i<=r;i++){
+          if(search(i,hexa(i))>1)
+              count++;
+    }      cout<<count<<endl; }}
