@@ -1,0 +1,53 @@
+/*Problem Description:
+King Alexander wants every chariot to line up for the start of her Winter-eve ball.
+He has asked you, Twilight Sparkle, to sort the horse chariots alphabetically but with royalty in front. Royal horses chariot have diamonds in their names.
+Constraints:
+1 <= Names <= 100
+Input Format:
+list of horse chariots numbering anywhere from 1 to 40 horse chariot, with 1 per line. The end of input will be marked with END on a line by itself. Names should be no longer than 100 characters in length, and to only contain letters and spaces.
+Output Format:
+Print the output in a separate lines contains Sort and list the horse chariots alphabetically in ascending order ('A' "first"), ignoring case. However, any horse chariot with a diamond in their name must be placed at the "top" of the list (before the "A's" start) in the diamond order given in the Discussion section below.
+Explanation:
+The Pony ranking (in Ascending order) for gemstones is a follows: 
+Lapis, Topaz, Tourmaline, Sapphire, Peridot, Ruby, Pearl, Emerald, Diamond, Aquamarine, Amethyst, Garnet.
+you are guaranteed that you will not have to deal with any gemstones not listed above. If multiple gems are listed in the same name, sort by whichever gem has "highest prioity" (e.g. a pony named 'Garnet Lapis' would be listed before a pony named 'Topaz Sapphire,' because Lapis has the highest priority). 
+In the case of equal ranking on gemstones, output in alpha order by total name (not just the gemstones), only sort by highest priority gemstones, after that by alpha. (Example, given the names: Lapis Topaz and Amethyst Lapis, they should be printed in order as: Amethyst Lapis then Lapis Topaz. That is because both names have the highest ranked gemstone (Lapis), so we simply sort them in ascending order alphabetically after their ranking has been established. We would not list Lapis Topaz before Amethyst Lapis because Topaz has a higher ranking over Amethyst. Stop comparing gemstone ranking after determine the highest rank of the gems in the name.) 
+You are guaranteed that there will be no ties in priority for gemstone ranking. You are also guaranteed that you will not encounter hyphenated names like Ruby-Sue. However, if a gemstone name happened to be found as part of a name (like Rubyanne) you can safely treat that as just another name to alphabetise. Gemstone names have to stand on their own (separated by spaces, or the entirety of the name) to be treated royally.*/
+#include <bits/stdc++.h>
+using namespace std;
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
+//char *gems[]={"NONE","Garnet","Amethyst","Aquamarine","Diamond","Emerald","Pearl","Ruby","Peridot","Sapphire","Tourmaline","Topaz","Lapis",0};
+string gems[]={"Garnet","Amethyst","Aquamarine","Diamond","Emerald","Pearl","Ruby","Peridot","Sapphire","Tourmaline","Topaz","Lapis"};
+int index(string s){
+    for (int i = 11; i>0; i--) {
+        if(s.find(" "+gems[i]) != string::npos||s.find(gems[i]+" ") != string::npos){
+            return 11-i;
+        }
+    }
+    return 12;
+}
+int main()
+{
+    vector<string> arr[13];
+    string temp;
+    while(1){
+        getline(cin,temp);
+        if(temp=="END") break;
+        arr[index(temp)].push_back(temp);
+    }
+    for (int i = 0; i < 13; i++) {
+        sort(arr[i].begin(),arr[i].end());
+        for(auto s:arr[i]){
+            cout<<s<<endl;
+        }
+        //cout<<endl;
+    }
+
+    return 0;
+    printf("char ponies[MAXP][BUFLEN];strcmp(ponies[a],ponies[b])>0;");
+  
+    char *gems[]={"NONE","Garnet","Amethyst","Aquamarine","Diamond","Emerald","Pearl","Ruby","Peridot","Sapphire","Tourmaline","Topaz","Lapis",0};
+    char x = gems[0][0];
+    printf("%c",x);
+}
