@@ -1,0 +1,72 @@
+Question description
+Dr.Siva jayaprakash is a faculty, who handling data structure course for IT department second year students.
+one day this facully was handling very interesting topic in data structure such that linked list, he has given the following explanation for linked list concept.
+"Linked list is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second mostused data structure after array. Following are the important terms to
+understand the concept of Linked List.
+Link - Each link of a linked list can store a data called an element.
+Next- Each link of a linked list contains a link to the next link called Next.
+Linkedlist-A Linked List contains the connection link to the first link called First."
+During this lecture time, principal surprisingly visited to the class and asking to conduct surprise test on Linked list concept.
+So the faculy decided to conduct test on the topic of linked list.
+the question was given to last bench students that is,
+The nodes are deleted D times from the end of the given linked list.
+For example if the given Linked list is 5>10»15>20>25 and remove 2 nodes,
+then the Linked Llist becomes 5>10>15.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+void tel()
+{
+return;
+}
+struct node
+{
+int data;
+struct node *next;
+}*head = NULL;
+void create()
+{
+int n;
+cin>>n;
+struct node *p1 = new node;
+int m;
+cin>>m;
+p1 -> data = m;
+head = p1;
+int i;
+for(i=0;i<n-1;i++)
+{
+int a;
+cin>>a;
+node *tt = new node;
+tt -> data = a;
+p1 -> next = tt;
+p1=p1->next;
+}
+p1 -> next = NULL;
+int del;
+bool found = false;
+cin>>del;
+node *nn = head;
+while(nn != NULL)
+{
+nn = nn -> next;
+node *dd = nn;
+int m = del; while(m-- > -1)
+{
+dd = dd -> next; if(dd == NULL)
+{
+nn -> next = NULL;
+found = true; break;}}
+if(found) break; }
+cout<<"Linked List:";
+while(head != NULL)
+{
+cout<<"->"<<head -> data;
+head = head -> next; }}
+int main()
+{
+create();
+return 0;
+cout<<"for(i=0;i<n;i++)";
+}
