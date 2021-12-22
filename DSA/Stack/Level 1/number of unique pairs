@@ -1,0 +1,31 @@
+/*Question description
+Given a permutation of numbers from I to N. Among all the subarrays, find the number of unique pairs (a,b) such that a b and a is maximum and b is the second maximum in that subarray.
+Input:
+First-line contains an integer, N(1 SNS10). the Second line contains Nspace-separated distinct integers, A, (1 SA;S N), denoting the permutation.
+Output:
+Print the required answer.*/
+
+#include <iostream>
+#include <stack>
+using namespace std;
+void dummy(){};
+int main(){
+int n,count{};
+cin>>n;
+stack<int> s1;
+stack<int> s2;
+int arr[n];
+for (int i{};i<n;i++) cin>>arr[i];
+s1.push(arr[0]);
+for (int i{};i<n;i++){
+if (arr[i]<s1.top()) count+=1;
+else s1.push(arr[i]);}
+s2.push(arr[n-1]);
+for (int i{n-1};i>=0;i--){
+if (arr[i]<s2.top())
+    count+=1;
+     else
+     s2.push(arr[i]);}
+cout<<count;
+if(0)cout<<"while(top!=-1 && stck[top]<a[i])top--;";
+}
