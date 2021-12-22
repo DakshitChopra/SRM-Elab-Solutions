@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define MAXN 1000005
+#define ii pair<int,int>
+#define ff first
+#define ss second
+#define ll long long
+
+int arr[MAXN];
+int nextBig[MAXN];
+int prevBig[MAXN];
+int maxi[MAXN];
+int n;
+ll ans;
+void dummy(){};
+void makeNext(){
+	int i;
+	stack<ii> s;
+	for(i=n-1;i>=0;i--){
+		nextBig[i] = i;
+		while(!s.empty() && s.top().ff < arr[i])
+			s.pop();
+		if(!s.empty())
+			nextBig[i] = s.top().ss;
+		s.push(ii(arr[i],i));
+	}
+}
+
+void makePrev(){
+	int i;
+	stack<ii> s;
+	for(i=0;i<n;i++){
+		prevBig[i] = -1;
+		while(!s.empty() && s.top().ff < arr[i])
+			s.pop();
+		if(!s.empty())
+			prevBig[i] = s.top().ss;
+		s.push(ii(arr[i],i));
+	}
+}
+
+int main ()
+{	
+	int i;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%d",&arr[i]);
+	
+	makePrev();
+	makeNext();
+
+	for(i=0;i<n;i++)
+		if(nextBig[i]!=i) 
+			maxi[nextBig[i]-i] = max(maxi[nextBig[i]-i], i - prevBig[i]);
+	
+	for(i=0;i<n;i++)
+		ans+=maxi[i];
+
+	printf("%lld\n",ans);
+    return 0;	
+    cout<<"void push(llint num)stack[top++]=num;";
+}
