@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+int A[309][309];
+int T, R, C, K, ans,k;
+int dp[2][309][309];
+bool ok[309][309][309];
+int main() {
+    cin >> T;
+    for(int i = 1; i <= T;i++) {
+        cin >> R >> C >> K;
+        memset(dp, 0, sizeof(dp));
+        for(int i = 1; i <= R; ++i) {
+            for(int j = 1; j <= C; ++j) {
+                cin >>A[i][j];
+            }
+        }
+        ans = R;
+        for(int i = 1; i <= R; ++i) {
+            for(int j = 1; j <= C; ++j) {
+                int maxv = A[i][j];
+                int minv = A[i][j];
+              	int f = i & 1;
+              	dp[f][j][1] = 1;
+                for(k = 2; k <= j; ++k) {
+                    minv = min(minv, A[i][j-k+1]);
+                    maxv = max(maxv, A[i][j-k+1]);
+                    if(maxv - minv > K) break;
+                    dp[f][j][1] = k;
+                }
+                ans = max(ans, dp[f][j][1]);
+                for(k = 2; k <= i; ++k) {
+                    dp[f][j][k] = min(dp[f][j][1], dp[f^1][j][k - 1]);
+                    ans = max(ans, dp[f][j][k] * k);
+                }
+            }
+        }
+        cout<<ans<<endl;
+    }
+ 
+}
