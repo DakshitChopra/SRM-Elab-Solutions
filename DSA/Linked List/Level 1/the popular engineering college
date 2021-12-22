@@ -1,0 +1,67 @@
+/*the popular engineering college got lowest pass percentage in last semester. the principal conducted faculty meeling and decided to visit all the classes surprisingly.
+Dr.Ramprasath is a faculty, who handling data structure course for EEE department second year students.
+one day this faculty was handling very interesting topic in data structure such that Linked List,
+During this lecture time, principal surprisingly visited to the class and asking to conduct surprise test on Linked list concept.
+So the faculty decided to conduct test on the topic of Linked List.
+the question was given to last bench students that is,
+The nodes are deleted betore a certain given node in the linked list.
+For exampleif the given Linked List is 5.> 10>15>20>25 and
+delete before 15 then the linked List becomes 15->20>25.*/
+#include <iostream>
+using namespace std;
+void ss(){
+return;
+}
+struct node
+{
+int data;
+node *next;
+}*head = NULL;
+bool found = true;
+int n;
+void del()
+{
+int n,i=0;
+cin>>n;
+node *j = head;
+while (j != NULL)
+{ i++;
+if( j -> next -> data == n)
+{
+head = j -> next;
+break;
+}
+j = j -> next;
+if(i == n)
+{
+found = false;
+break;
+}
+}
+if(!found) cout<<"Invalid Node! ";
+cout<<"Linked List:";
+while(head != NULL)
+cout<<"->"<<head -> data,
+head = head -> next;}
+void create()
+{
+int n,i=0,first;cin>>n;node *p1 = new node;cin>>first;p1 -> data = first;
+head = p1;
+while(i!=n-1)
+{
+int a;
+cin>>a;
+node *n = new node;
+n -> data = a;
+n -> next = NULL;
+p1 -> next = n;
+p1 = n;
+i++;
+}
+p1 -> next = NULL;
+}
+int main()
+{
+create();
+del();return 0;cout<<"p1=p1->next for(i=0;i<n;i++) p1=p1->next";
+}
