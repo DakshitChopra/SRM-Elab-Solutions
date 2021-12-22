@@ -1,0 +1,49 @@
+/*Question description
+There is a classroom which has M rows of benches in it. Also, N students will arrive one-by-one and take a seat.
+Every student has a preferred row number(rows are numbered 1 to M and all rows have a maximum capacity K. Now, the students come one by one starting from 1 to N  and follow these rules for seating arrangements:
+Every student will sit in his/her preferred row(if the row is not full).
+If the preferred row is fully occupied, the student will sit in the next vacant row. (Next row for N will be 1)
+If all the seats are occupied, the student will not be able to sit anywhere.*/
+
+#include <stdio.h>
+ 
+int main()
+{
+    int n,m,k,x,y,i,ans=0,flag=1;
+    scanf("%d %d %d",&n,&m,&k);
+    int a[100001]={0},b[100001]={0};
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x);
+        if(a[x]<k)
+        {
+            ans++;
+            a[x]++;
+        }
+        else if(flag!=0)
+        {
+            y=x;
+            x++;
+            if(b[y]!=0)
+            x=b[y];
+            flag=0;
+            while(x!=y) 
+            {
+                if(x==m+1)
+                x=1;
+                if(x==y)
+                break;
+                if(a[x]<k)
+                {
+                    a[x]++;
+                    flag=1;
+                    b[y]=x;
+                    break;
+                }
+                x++;
+            }
+        }
+    }
+    printf("%d",n-ans);
+    return 0;
+}
