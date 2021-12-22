@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int i, j, arr[1000000],n, temp=0,st[1000000]= {0};
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    st[n-1] = arr[n-1];
+    temp = arr[n-1];
+    for(i=n-2;i>=0;i--) {
+        for(j=i+1;j<n;j++)
+        if(arr[i]<arr[j]){
+             st[i]=arr[i]^st[j];
+        break;
+       }
+    if(st[i] == 0)
+       st[i] = arr[i];
+    if(st[i] > temp)
+        temp = st[i];
+    }
+    printf("%d",temp);
+    return 0;
+}
